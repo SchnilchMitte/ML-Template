@@ -1,0 +1,48 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/python
+{
+	"name": "Python 3",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	//"image": "mcr.microsoft.com/devcontainers/python:0-3.9-bullseye  mcr.microsoft.com/devcontainers/python:3.11-bullseye"
+	"dockerComposeFile": ["../docker-compose.yml"],
+	"service": "devcontainer",
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+    "onCreateCommand": {
+		"jupyterlab-py-dependencies": "pip install jupyterlab",
+		"notebook-py-dependencies": "pip install notebook",
+		"ipywidgets-py-dependencies": "pip install ipywidgets",
+		"qtconsole-py-dependencies": "pip install qtconsole",
+		"matplotlib-py-dependencies": "pip install matplotlib",
+		"numpy-py-dependencies": "pip install numpy",
+		"pandas-py-dependencies": "pip install pandas"
+	},
+	"postStartCommand": {
+		"upgrade-pip": "pip install --upgrade pip"
+		//"echo-test": "jupyter notebook"
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python",
+				"KevinRose.vsc-python-indent",
+				"ms-python.vscode-pylance",
+				"EditorConfig.EditorConfig",
+				"ms-toolsai.jupyter"
+			]
+		}
+	}
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "pip3 install --user -r requirements.txt",
+
+	// Configure tool-specific properties.
+	// "customizations": {},
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}

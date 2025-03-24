@@ -1,0 +1,10 @@
+version: '3.11'
+services:
+  devcontainer:
+    image: "mcr.microsoft.com/devcontainers/python:3.11-bullseye"
+    volumes:
+      - ..:/workspaces:cached
+    ports:
+      - "8935:8080"
+    #entrypoint: ["/workspaces/ML-Template/devcontainer-bootstrap.sh"] uncomment if you wnta to work without VS Code
+    command: /bin/sh -c "while sleep 1000; do :; done"
