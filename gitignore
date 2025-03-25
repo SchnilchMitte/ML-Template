@@ -1,0 +1,17 @@
+# Ignore folders
+
+.git/
+.ipynb_checkpoints/
+data/
+
+# Ignore Jupyter Notebook files
+
+
+# Ignore shell script
+devcontainer-bootstrap.sh
+
+# Ignore Docker and YAML files
+docker-compose.yml
+
+# Ignore markdown files
+README.md
