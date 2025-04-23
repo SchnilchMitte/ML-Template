@@ -15,7 +15,8 @@
 		"matplotlib-py-dependencies": "pip install matplotlib",
 		"numpy-py-dependencies": "pip install numpy",
 		"pandas-py-dependencies": "pip install pandas",
-		"sklearn-py-dependencies": "pip install scikit-learn"
+		"sklearn-py-dependencies": "pip install scikit-learn",
+		"seaborn-py-dependencies": "pip install seaborn"
 	},
 	"postStartCommand": {
 		"upgrade-pip": "pip install --upgrade pip"
