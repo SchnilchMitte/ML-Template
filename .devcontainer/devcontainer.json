@@ -16,7 +16,8 @@
 		"numpy-py-dependencies": "pip install numpy",
 		"pandas-py-dependencies": "pip install pandas",
 		"sklearn-py-dependencies": "pip install scikit-learn",
-		"seaborn-py-dependencies": "pip install seaborn"
+		"seaborn-py-dependencies": "pip install seaborn",
+		"torch-py-dependencies": "pip install torch"
 	},
 	"postStartCommand": {
 		"upgrade-pip": "pip install --upgrade pip"
